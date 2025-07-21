@@ -4,6 +4,7 @@ import { LanguageProvider } from './contexts/LanguageContext'
 import HomePage from './pages/HomePage'
 import SiriLights from './components/ui/SiriLights'
 import BackgroundFX from './components/ui/BackgroundFX';
+import HackerRain from './components/ui/HackerRain';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <LanguageProvider>
         <div className="App">
           <BackgroundFX />
+          {/* <HackerRain /> */}
           <SiriLights />
           <Routes>
             <Route path="/" element={<HomePage />} />

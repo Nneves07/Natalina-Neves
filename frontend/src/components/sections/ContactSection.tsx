@@ -168,15 +168,15 @@ const ContactSection = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={copyEmail}
-                className="inline-flex items-center gap-3 px-6 py-4 bg-white/5 backdrop-blur-xl border border-white/20 rounded-2xl hover:bg-white/10 transition-all duration-300 group"
+                className="flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 sm:py-4 bg-white/5 backdrop-blur-xl border border-white/20 rounded-2xl hover:bg-white/10 transition-all duration-300 group w-full max-w-xs mx-auto text-center break-all"
               >
-                <span className="text-white font-mono text-lg">
+                <span className="text-white font-mono text-base sm:text-lg truncate w-0 flex-1">
                   nevesdasilvanatalina@gmail.com
                 </span>
                 {copied ? (
-                  <Check className="w-5 h-5 text-emerald-400" />
+                  <Check className="w-5 h-5 text-emerald-400 flex-shrink-0" />
                 ) : (
-                  <Copy className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300" />
+                  <Copy className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300 flex-shrink-0" />
                 )}
               </motion.button>
               

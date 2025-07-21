@@ -4,6 +4,7 @@ import { heroData } from "../../data/portfolio";
 import { useLanguageContext } from "../../contexts/LanguageContext";
 import GlassCard from '../ui/GlassCard';
 import FuturisticButton from '../ui/FuturisticButton';
+import HackerRain from '../ui/HackerRain';
 
 const HeroSection = () => {
   const { language } = useLanguageContext();
@@ -36,6 +37,7 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="relative overflow-hidden bg-black text-white">
+      <HackerRain />
       {/* Futuristic background */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
       {/* Animated grid */}
