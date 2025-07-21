@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Linkedin, Twitter, Mail, Heart, ArrowUp } from 'lucide-react';
+import { Linkedin, Twitter, Mail, Heart, ArrowUp, Github } from 'lucide-react';
 import { useLanguageContext } from '../../contexts/LanguageContext';
 
 const Footer = () => {
@@ -28,6 +28,12 @@ const Footer = () => {
       href: 'mailto:nevesdasilvanatalina@gmail.com',
       label: 'Email',
       color: 'hover:text-emerald-400'
+    },
+    {
+      icon: Github,
+      href: 'https://github.com/Nneves07',
+      label: 'GitHub',
+      color: 'hover:text-gray-400'
     }
   ];
 
