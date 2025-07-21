@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ChevronDown, TrendingUp, Users, Award, Zap, Brain, Code, Rocket } from "lucide-react";
+import { ChevronDown, Brain, Code, Rocket } from "lucide-react";
 import { heroData } from "../../data/portfolio";
 import { useLanguageContext } from "../../contexts/LanguageContext";
 import GlassCard from '../ui/GlassCard';
@@ -15,33 +15,6 @@ const HeroSection = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  const metrics = [
-    { 
-      icon: TrendingUp, 
-      value: '11+', 
-      label: isSpanish ? 'Años' : 'Years', 
-      color: 'text-emerald-400' 
-    },
-    { 
-      icon: Users, 
-      value: '5', 
-      label: isSpanish ? 'Empresas' : 'Companies', 
-      color: 'text-blue-400' 
-    },
-    { 
-      icon: Award, 
-      value: 'TechStars', 
-      label: isSpanish ? 'Alumna' : 'Alumna', 
-      color: 'text-purple-400' 
-    },
-    { 
-      icon: Zap, 
-      value: 'AI', 
-      label: isSpanish ? 'Leader' : 'Leader', 
-      color: 'text-orange-400' 
-    }
-  ];
 
   const expertiseAreas = [
     { 
@@ -126,7 +99,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-wrap gap-6 justify-center"
           >
-            {expertiseAreas.map((area, index) => (
+            {expertiseAreas.map((area) => (
               <GlassCard
                 key={area.label}
                 variant="accent"

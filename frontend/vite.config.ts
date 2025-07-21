@@ -17,6 +17,7 @@ export default defineConfig({
       '@assets': '/src/assets',
     },
   },
+  base: '/Natalina-Neves/', // Ruta base para despliegue en GitHub Pages
   server: {
     port: 3000,
     host: true,
