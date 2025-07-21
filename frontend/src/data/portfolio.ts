@@ -70,27 +70,27 @@ export const experienceData = [
     current: true,
     description: {
       es: [
-        'CTO y cofundadora de HeyNori, startup de IA conversacional para automatización de ventas y atención.',
-        'Lidero el desarrollo de la plataforma, arquitectura y equipo técnico.',
-        'Responsable de visión tecnológica, innovación y escalabilidad.'
+        'CTO y cofundadora de HeyNori!, plataforma de productividad potenciada por IA que conecta todas las herramientas de trabajo de los equipos modernos.',
+        'Nori elimina tareas repetitivas, acelera proyectos y optimiza la productividad mediante automatización inteligente y análisis de patrones.',
+        'Responsable de visión tecnológica, arquitectura y desarrollo de producto.'
       ],
       en: [
-        'CTO and co-founder of HeyNori, conversational AI startup for sales and support automation.',
-        'Lead platform development, architecture and tech team.',
-        'Responsible for tech vision, innovation and scalability.'
+        'CTO and co-founder of HeyNori!, an AI-powered productivity platform that connects all the work tools of modern teams.',
+        'Nori eliminates repetitive tasks, accelerates projects, and optimizes productivity through intelligent automation and pattern analysis.',
+        'Responsible for tech vision, architecture, and product development.'
       ]
     },
     technologies: [
-      'AI', 'Machine Learning', 'NLP', 'React', 'Node.js', 'Cloud', 'LLMs', 'Voice Tech'
+      'AI', 'Automation', 'NLP', 'React', 'Node.js', 'Cloud', 'Integrations', 'Productivity'
     ],
     achievements: {
       es: [
-        'Lanzamiento de MVP y primeras integraciones con clientes.',
-        'Construcción de equipo técnico multidisciplinario.'
+        'Integración nativa con más de 100 herramientas (Slack, Jira, Teams, Zoom, GitHub, Salesforce, etc.).',
+        'Implementación de automatizaciones personalizadas y analítica en tiempo real.'
       ],
       en: [
-        'MVP launch and first client integrations.',
-        'Built a multidisciplinary tech team.'
+        'Native integration with 100+ tools (Slack, Jira, Teams, Zoom, GitHub, Salesforce, etc.).',
+        'Implementation of custom automations and real-time analytics.'
       ]
     },
     link: 'https://heynori.ai/'
@@ -302,11 +302,11 @@ export const projectsData = [
       en: 'HeyNori - Conversational AI Platform'
     },
     description: {
-      es: 'Startup de IA conversacional para automatización de ventas y atención. CTO y cofundadora.',
-      en: 'Conversational AI startup for sales and support automation. CTO and co-founder.'
+      es: 'HeyNori! es una plataforma de productividad potenciada por IA que conecta todas tus herramientas de trabajo, automatiza flujos y optimiza la productividad de equipos modernos. CTO y cofundadora.',
+      en: 'HeyNori! is an AI-powered productivity platform that connects all your work tools, automates workflows, and optimizes productivity for modern teams. CTO and co-founder.'
     },
     image: '/images/projects/heynori.jpg',
-    technologies: ['AI', 'NLP', 'React', 'Node.js', 'Cloud'],
+    technologies: ['AI', 'Automation', 'Integrations', 'React', 'Node.js', 'Cloud'],
     githubUrl: null,
     liveUrl: 'https://heynori.ai/',
     featured: true,
