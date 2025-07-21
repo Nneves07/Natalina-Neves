@@ -13,13 +13,13 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: Linkedin,
-      href: 'https://linkedin.com/in/natalina-neves',
+      href: 'https://www.linkedin.com/in/natalina-neves-da-silva/',
       label: 'LinkedIn',
       color: 'hover:text-blue-400'
     },
     {
       icon: Twitter,
-      href: 'https://x.com/natalina_neves',
+      href: 'https://x.com/natneves7',
       label: 'X (Twitter)',
       color: 'hover:text-blue-400'
     },

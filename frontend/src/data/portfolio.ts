@@ -58,10 +58,48 @@ export const aboutData = {
 
 export const experienceData = [
   {
+    id: 'heynori',
+    company: 'HeyNori',
+    position: {
+      es: 'CTO & Co-founder',
+      en: 'CTO & Co-founder'
+    },
+    location: 'Remoto',
+    startDate: '2024-01',
+    endDate: null,
+    current: true,
+    description: {
+      es: [
+        'CTO y cofundadora de HeyNori, startup de IA conversacional para automatización de ventas y atención.',
+        'Lidero el desarrollo de la plataforma, arquitectura y equipo técnico.',
+        'Responsable de visión tecnológica, innovación y escalabilidad.'
+      ],
+      en: [
+        'CTO and co-founder of HeyNori, conversational AI startup for sales and support automation.',
+        'Lead platform development, architecture and tech team.',
+        'Responsible for tech vision, innovation and scalability.'
+      ]
+    },
+    technologies: [
+      'AI', 'Machine Learning', 'NLP', 'React', 'Node.js', 'Cloud', 'LLMs', 'Voice Tech'
+    ],
+    achievements: {
+      es: [
+        'Lanzamiento de MVP y primeras integraciones con clientes.',
+        'Construcción de equipo técnico multidisciplinario.'
+      ],
+      en: [
+        'MVP launch and first client integrations.',
+        'Built a multidisciplinary tech team.'
+      ]
+    },
+    link: 'https://heynori.ai/'
+  },
+  {
     id: 'creai',
     company: 'Creai',
     position: {
-      es: 'Technical Leader',
+      es: 'Líder Técnica',
       en: 'Technical Leader'
     },
     location: 'Costa Rica',
@@ -70,30 +108,27 @@ export const experienceData = [
     current: true,
     description: {
       es: [
-        'Lidero un equipo de expertos en IA para diseñar e implementar modelos de machine learning optimizados',
-        'Colaboro estrechamente con stakeholders para cumplir objetivos y expectativas',
-        'Superviso el progreso del proyecto, asegurando comunicación efectiva y cumplimiento de plazos'
+        'Lidero un equipo de expertos en IA para diseñar e implementar modelos de machine learning optimizados.',
+        'Colaboro estrechamente con stakeholders para cumplir objetivos y expectativas.',
+        'Superviso el progreso del proyecto, asegurando comunicación efectiva y cumplimiento de plazos.'
       ],
       en: [
-        'Lead a team of AI experts to design and implement optimized machine learning models',
-        'Collaborate closely with stakeholders to meet objectives and expectations',
-        'Supervise project progress, ensuring effective communication and deadline compliance'
+        'Lead a team of AI experts to design and implement optimized machine learning models.',
+        'Collaborate closely with stakeholders to meet objectives and expectations.',
+        'Supervise project progress, ensuring effective communication and deadline compliance.'
       ]
     },
     technologies: [
-      'AI', 'Machine Learning', 'Natural Language Processing', 'Data Analytics',
-      'Cloud Services', 'Front-End', 'Back-End', 'Database Management'
+      'AI', 'Machine Learning', 'NLP', 'Cloud', 'Project Management'
     ],
     achievements: {
       es: [
-        'Implementación exitosa de soluciones de IA para múltiples clientes',
-        'Optimización de procesos de desarrollo y deployment',
-        'Mentoría y desarrollo de talento técnico'
+        'Implementación exitosa de soluciones de IA para múltiples clientes.',
+        'Optimización de procesos de desarrollo y deployment.'
       ],
       en: [
-        'Successful implementation of AI solutions for multiple clients',
-        'Optimization of development and deployment processes',
-        'Mentoring and technical talent development'
+        'Successful implementation of AI solutions for multiple clients.',
+        'Optimization of development and deployment processes.'
       ]
     }
   },
@@ -101,43 +136,39 @@ export const experienceData = [
     id: 'innvox',
     company: 'Innvox',
     position: {
-      es: 'Co-Founder & CTO',
-      en: 'Co-Founder & CTO'
+      es: 'CTO & Co-founder',
+      en: 'CTO & Co-founder'
     },
-    location: 'Florida, Estados Unidos',
-    startDate: '2021-11',
-    endDate: '2023-10',
+    location: 'Remoto',
+    startDate: '2021-01',
+    endDate: '2023-09',
     current: false,
     description: {
       es: [
-        'Co-fundé Innvox, software de coaching de ventas y customer success impulsado por IA',
-        'Lideré el desarrollo de la plataforma, colaborando con un equipo multidisciplinario',
-        'Dirigí la estrategia tecnológica de la empresa, supervisé el desarrollo de productos'
+        'CTO y cofundadora de Innvox, plataforma de coaching de ventas impulsada por IA.',
+        'Diseño y liderazgo de arquitectura técnica, desarrollo de producto y equipo.',
+        'Responsable de visión tecnológica, innovación y escalabilidad.'
       ],
       en: [
-        'Co-founded Innvox, AI-powered sales coaching and customer success software',
-        'Led platform development, collaborating with a multidisciplinary team',
-        'Directed the company\'s technology strategy, supervised product development'
+        'CTO and co-founder of Innvox, AI-powered sales coaching platform.',
+        'Designed and led technical architecture, product development and team.',
+        'Responsible for tech vision, innovation and scalability.'
       ]
     },
     technologies: [
-      'AI', 'Sales Coaching', 'Customer Success', 'AI-powered Guidance',
-      'Platform Development', 'Machine Learning', 'Natural Language Processing',
-      'Cloud Services (AWS/Azure/GCP)', 'JavaScript/React', 'Python/Flask/Django',
-      'SQL/NoSQL'
+      'AI', 'Machine Learning', 'NLP', 'React', 'Node.js', 'Cloud', 'Voice Tech'
     ],
     achievements: {
       es: [
-        'Desarrollo completo de plataforma de IA para coaching',
-        'Participación en TechStars Tel Aviv 2023',
-        'Crecimiento de equipo técnico de 0 a 10+ desarrolladores'
+        'Lanzamiento de producto y adquisición de clientes iniciales.',
+        'Construcción de equipo técnico y roadmap de innovación.'
       ],
       en: [
-        'Complete development of AI platform for coaching',
-        'Participation in TechStars Tel Aviv 2023',
-        'Technical team growth from 0 to 10+ developers'
+        'Product launch and first customer acquisition.',
+        'Built tech team and innovation roadmap.'
       ]
-    }
+    },
+    link: null
   },
   {
     id: 'intuitivo',
@@ -265,14 +296,31 @@ export const experienceData = [
 
 export const projectsData = [
   {
+    id: 'heynori',
+    title: {
+      es: 'HeyNori - Plataforma de IA conversacional',
+      en: 'HeyNori - Conversational AI Platform'
+    },
+    description: {
+      es: 'Startup de IA conversacional para automatización de ventas y atención. CTO y cofundadora.',
+      en: 'Conversational AI startup for sales and support automation. CTO and co-founder.'
+    },
+    image: '/images/projects/heynori.jpg',
+    technologies: ['AI', 'NLP', 'React', 'Node.js', 'Cloud'],
+    githubUrl: null,
+    liveUrl: 'https://heynori.ai/',
+    featured: true,
+    category: 'ai'
+  },
+  {
     id: 'innvox-platform',
     title: {
       es: 'Innvox - Plataforma de Coaching de Ventas con IA',
       en: 'Innvox - AI Sales Coaching Platform'
     },
     description: {
-      es: 'Plataforma completa de coaching de ventas impulsada por IA que analiza conversaciones y proporciona retroalimentación personalizada para mejorar el rendimiento de ventas.',
-      en: 'Complete AI-powered sales coaching platform that analyzes conversations and provides personalized feedback to improve sales performance.'
+      es: 'Plataforma completa de coaching de ventas impulsada por IA. CTO y cofundadora.',
+      en: 'Complete AI-powered sales coaching platform. CTO and co-founder.'
     },
     image: '/images/projects/innvox.jpg',
     technologies: ['React', 'Python', 'TensorFlow', 'NLP', 'AWS', 'PostgreSQL'],
@@ -351,7 +399,7 @@ export const educationData = [
 export const contactData = {
   email: 'nevesdasilvanatalina@gmail.com',
   phone: '+54 11 3301-9241',
-  linkedin: 'https://www.linkedin.com/in/natalina-neves-da-silva/',
+  linkedin: 'https://www.linkedin.com/in/natalina-neves-da-silva-da-silva/',
   twitter: 'https://x.com/natneves7',
   github: 'https://github.com/Nneves07',
   location: {

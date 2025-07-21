@@ -13,7 +13,7 @@ const ContactSection = () => {
       icon: Linkedin,
       title: 'LinkedIn',
       description: isSpanish ? 'Conecta profesionalmente' : 'Connect professionally',
-      href: 'https://linkedin.com/in/natalina-neves',
+      href: 'https://www.linkedin.com/in/natalina-neves-da-silva/',
       color: 'from-blue-500 to-blue-600',
       hoverColor: 'hover:from-blue-600 hover:to-blue-700'
     },
@@ -21,7 +21,7 @@ const ContactSection = () => {
       icon: Twitter,
       title: 'X (Twitter)',
       description: isSpanish ? 'Sígueme para actualizaciones' : 'Follow for updates',
-      href: 'https://x.com/natalina_neves',
+      href: 'https://x.com/natneves7',
       color: 'from-blue-400 to-blue-500',
       hoverColor: 'hover:from-blue-500 hover:to-blue-600'
     },
@@ -207,7 +207,7 @@ const ContactSection = () => {
               }
             </p>
             <motion.a
-              href="https://linkedin.com/in/natalina-neves"
+              href="https://www.linkedin.com/in/natalina-neves-da-silva/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}

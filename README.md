@@ -186,7 +186,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 ## 📞 Contacto
 
 - **Email**: nevesdasilvanatalina@gmail.com
-- **LinkedIn**: [Natalina Neves da Silva](https://www.linkedin.com/in/natalina-neves-da-silva/)
+- **LinkedIn**: [Natalina Neves da Silva](https://www.linkedin.com/in/natalina-neves-da-silva-da-silva/)
 - **Twitter**: [@natneves7](https://x.com/natneves7)
 - **GitHub**: [@Nneves07](https://github.com/Nneves07)
 
