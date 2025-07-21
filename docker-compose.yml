@@ -1,0 +1,134 @@
+version: '3.8'
+
+services:
+  # Base de datos PostgreSQL
+  postgres:
+    image: postgres:15-alpine
+    container_name: natalina-neves-postgres
+    environment:
+      POSTGRES_DB: natalina_neves_portfolio
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/prisma/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - natalina-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis para caché
+  redis:
+    image: redis:7-alpine
+    container_name: natalina-neves-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - natalina-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    container_name: natalina-neves-backend
+    environment:
+      NODE_ENV: development
+      PORT: 5000
+      DATABASE_URL: postgresql://postgres:postgres123@postgres:5432/natalina_neves_portfolio
+      REDIS_URL: redis://redis:6379
+      JWT_SECRET: dev-jwt-secret-super-seguro
+      FRONTEND_URL: http://localhost:3000
+      BACKEND_URL: http://localhost:5000
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - natalina-network
+    command: npm run dev
+
+  # Frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    container_name: natalina-neves-frontend
+    environment:
+      VITE_API_URL: http://localhost:5000
+      VITE_APP_ENV: development
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    networks:
+      - natalina-network
+    command: npm run dev
+
+  # Prisma Studio (opcional)
+  prisma-studio:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    container_name: natalina-neves-prisma-studio
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres123@postgres:5432/natalina_neves_portfolio
+    ports:
+      - "5555:5555"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - natalina-network
+    command: npx prisma studio --hostname 0.0.0.0 --port 5555
+    profiles:
+      - tools
+
+  # Nginx para producción local
+  nginx:
+    image: nginx:alpine
+    container_name: natalina-neves-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/ssl:/etc/nginx/ssl
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - natalina-network
+    profiles:
+      - production
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  natalina-network:
+    driver: bridge 
