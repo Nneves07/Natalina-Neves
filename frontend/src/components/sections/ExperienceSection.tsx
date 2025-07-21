@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Briefcase, Calendar, MapPin, ExternalLink, ChevronRight, Zap } from "lucide-react";
+import { Briefcase, Calendar, MapPin, ChevronRight, Zap } from "lucide-react";
 import { experienceData } from "../../data/portfolio";
 import { useLanguageContext } from "../../contexts/LanguageContext";
 

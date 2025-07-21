@@ -1,21 +1,20 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tsconfigPaths from 'vite-tsconfig-paths'
-import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
-      '@components': resolve(__dirname, './src/components'),
-      '@pages': resolve(__dirname, './src/pages'),
-      '@hooks': resolve(__dirname, './src/hooks'),
-      '@services': resolve(__dirname, './src/services'),
-      '@types': resolve(__dirname, './src/types'),
-      '@utils': resolve(__dirname, './src/utils'),
-      '@assets': resolve(__dirname, './src/assets'),
+      '@': '/src',
+      '@components': '/src/components',
+      '@pages': '/src/pages',
+      '@hooks': '/src/hooks',
+      '@services': '/src/services',
+      '@types': '/src/types',
+      '@utils': '/src/utils',
+      '@assets': '/src/assets',
     },
   },
   server: {
@@ -30,7 +29,8 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'dist',
+    outDir: '../docs', // Cambia 'dist' por '../docs' para que el build salga en la raíz
+    emptyOutDir: true, // Limpia la carpeta docs antes de cada build
     sourcemap: true,
     rollupOptions: {
       output: {
@@ -43,9 +43,5 @@ export default defineConfig({
       },
     },
   },
-  test: {
-    globals: true,
-    environment: 'jsdom',
-    setupFiles: ['./src/test/setup.ts'],
-  },
+  // La configuración de test debe ir en un archivo separado si usas Vitest
 }) 

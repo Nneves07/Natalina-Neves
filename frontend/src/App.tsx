@@ -3,12 +3,14 @@ import { ThemeProvider } from './components/providers/ThemeProvider'
 import { LanguageProvider } from './contexts/LanguageContext'
 import HomePage from './pages/HomePage'
 import SiriLights from './components/ui/SiriLights'
+import BackgroundFX from './components/ui/BackgroundFX';
 
 function App() {
   return (
     <ThemeProvider>
       <LanguageProvider>
         <div className="App">
+          <BackgroundFX />
           <SiriLights />
           <Routes>
             <Route path="/" element={<HomePage />} />
