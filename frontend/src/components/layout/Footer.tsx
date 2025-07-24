@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Linkedin, Twitter, Mail, Heart, ArrowUp, Github } from 'lucide-react';
 import { useLanguageContext } from '../../contexts/LanguageContext';
+import CredlyBadge from '../ui/CredlyBadge';
 
 const Footer = () => {
   const { language } = useLanguageContext();
@@ -41,8 +42,6 @@ const Footer = () => {
     <footer className="relative bg-black border-t border-white/10 overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-t from-black via-gray-900 to-black"></div>
-      
-      {/* Floating elements */}
       <div className="absolute top-0 left-1/4 w-32 h-32 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-3xl animate-float"></div>
       <div className="absolute bottom-0 right-1/4 w-40 h-40 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full blur-3xl animate-float-delayed"></div>
 
@@ -140,6 +139,11 @@ const Footer = () => {
             className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-8"
           />
 
+          {/* Credly Badge - discreto y centrado */}
+          <div className="flex justify-center my-4">
+            <CredlyBadge />
+          </div>
+
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <motion.p
@@ -175,4 +179,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;

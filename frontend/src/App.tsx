@@ -4,7 +4,6 @@ import { LanguageProvider } from './contexts/LanguageContext'
 import HomePage from './pages/HomePage'
 import SiriLights from './components/ui/SiriLights'
 import BackgroundFX from './components/ui/BackgroundFX';
-import HackerRain from './components/ui/HackerRain';
 
 function App() {
   return (

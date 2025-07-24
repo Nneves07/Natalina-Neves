@@ -7,6 +7,7 @@ import AboutSection from '../components/sections/AboutSection'
 import ExperienceSection from '../components/sections/ExperienceSection'
 import ProjectsSection from '../components/sections/ProjectsSection'
 import ContactSection from '../components/sections/ContactSection'
+import SkillsSection from '../components/sections/SkillsSection' // Uncomment if SkillsSection is implemented
 
 const HomePage = () => {
   return (
@@ -28,6 +29,10 @@ const HomePage = () => {
 
         {/* About Section */}
         <AboutSection />
+
+        {/* Skills Section */}
+        {/* Uncomment if SkillsSection is implemented */}
+        { <SkillsSection /> }
 
         {/* Experience Section */}
         <ExperienceSection />
